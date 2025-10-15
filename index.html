@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    
+  <section>
+    <h1>Todo List</h1>
+    <div class="todo-container">
+      <!-- Form Add -->
+      <form id="todo-form">
+        <input type="text" id="todo-input" placeholder="Add new task..." required />
+        <input type="date" id="todo-date" required />
+        <button type="submit">Add</button>
+      </form>
+
+      <!-- Filter -->
+      <div class="filter-section">
+        <div class="left">
+          <button id="filter-btn" type="button">Filter</button>
+        </div>
+        <div class="right">
+          <button id="clear-all" type="button" class="delete-btn">Delete All</button>
+        </div>
+      </div>
+
+      <!-- Display -->
+      <table>
+        <thead>
+          <tr>
+            <th>TASK</th>
+            <th>DUE DATE</th>
+            <th>STATUS</th>
+            <th>ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody id="todo-body">
+          <tr><td colspan="4" class="empty">No task found</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
